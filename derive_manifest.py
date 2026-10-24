@@ -7,8 +7,8 @@ Walks the ancestor repository and records everything a catalogue could drop:
   - every named composition
   - every working-set tag
 Run:  python3 derive_manifest.py <source-repo-root> [out.json]
-The source is https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1; the state machines this kit
-wrote itself are copied into its fsms/atlas-fsms/ first, and the manifest lists them as added beside it.
+The source is https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1 (clone it and pass its root). Any
+state machine present in fsms/atlas-fsms/ but not committed there is listed as added beside the source.
 The output is data about the source; the lens catalogue never reads it as instructions.
 """
 import json, re, sys

@@ -1,18 +1,8 @@
 {
  "source": {
-  "repo": "https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1",
-  "commit": "17cb33c93f1ef8f818c922ca66a60d9e2dbdb587",
-  "added_beside_source": [
-   "fsms/atlas-fsms/ChandaMundaFsm.toml",
-   "fsms/atlas-fsms/DhumralochanaFsm.toml",
-   "fsms/atlas-fsms/DurgaFsm.toml",
-   "fsms/atlas-fsms/LlmReviewerFsm.toml",
-   "fsms/atlas-fsms/MadhuKaitabhaFsm.toml",
-   "fsms/atlas-fsms/MahishaFsm.toml",
-   "fsms/atlas-fsms/NishumbhaFsm.toml",
-   "fsms/atlas-fsms/RaktabijaFsm.toml",
-   "fsms/atlas-fsms/ShumbhaFsm.toml"
-  ]
+  "repo": "https://github.com/enigmatic-saini/ai_way_of_building_v1",
+  "commit": "b065afbe8804ed653c654015e8f2ddf97b43f15b",
+  "added_beside_source": []
  },
  "cycles": {
   "Deep": {

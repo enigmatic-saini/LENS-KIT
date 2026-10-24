@@ -11,7 +11,7 @@ source: https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1
 
 > Kept beside `LENS.md` and read with it by `check_lens.py`. `LENS.md` is the catalogue a reader drops into any project and any model; this file holds what only its maintainer needs — the witness's claims, the lifecycle and admission rules, the change log and the ancestry ledger. Section numbers continue from `LENS.md`.
 >
-> **The source.** The ancestors in the ledger are the review cycles, state machines and compositions of [AI_WAY_OF_BUILDING_V1](https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1) — the older catalogue this one was seeded from — at the commit `ancestry_manifest.json` names, together with the state machines this kit wrote itself (the Devī Māhātmya's eight and the LLM reviewer), which the manifest lists as added beside it. The laws, engines and hooks stay in that repository.
+> **The source.** The ancestors in the ledger are the review cycles, state machines and compositions of [AI_WAY_OF_BUILDING_V1](https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1) — the older catalogue this one was seeded from — at the commit `ancestry_manifest.json` names. The state machines this kit wrote itself — the Devī Māhātmya's eight and the LLM reviewer — live there too, in `fsms/atlas-fsms/`, so the manifest derives from that repository alone. The laws, engines and hooks stay in that repository.
 
 ## §5. Witness
 
@@ -72,6 +72,10 @@ The state line in this file's front matter is read by the witness (claim 16), no
 **Scope honesty.** This file does not say what to think. A section that drifts into telling the reader what the right answer is loses its place at the next check.
 
 ## §7. Change log
+
+### 2.1b — 2026-10-24 — the source is one repository
+
+The nine state machines this kit wrote — Durga, Madhu–Kaitabha, Mahisha, Dhumralochana, Chanda–Munda, Raktabija, Nishumbha, Shumbha and the LLM reviewer — were added to [AI_WAY_OF_BUILDING_V1](https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1) (`fsms/atlas-fsms/`, commit `b065afb`), where every other ancestor's machine already lives. The manifest was re-derived from that repository alone: nothing is now *added beside* the source, and every cycle, composition, machine and state is as it was. No lens, tag, claim or ledger decision changed; `LENS.md` unchanged.
 
 ### 2.1a — 2026-10-24 — the source named
 
