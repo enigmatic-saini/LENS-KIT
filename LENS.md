@@ -526,4 +526,4 @@ A composition is a reading order, not a new lens, and it ends in one thing — t
 
 ## Kept with this file
 
-*This file is the whole catalogue a reader needs, for any reviewer, human or model. It is maintained with `LENS_META.md` — the witness's claims (§5), the lifecycle and its admission rules (§6), the change log and the ancestry ledger (§7) — and checked by `check_lens.py`. A change to a lens follows `LENS_META.md` §6.*
+*This file is the whole catalogue a reader needs, for any reviewer, human or model. It is maintained with `workspace/LENS_META.md` — the witness's claims (§5), the lifecycle and its admission rules (§6), the change log and the ancestry ledger (§7) — and checked by `workspace/check_lens.py`. A change to a lens follows `LENS_META.md` §6.*

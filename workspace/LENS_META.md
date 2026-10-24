@@ -9,7 +9,7 @@ source: https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1
 
 # LENS_META — the maintainer's half of LENS.md
 
-> Kept beside `LENS.md` and read with it by `check_lens.py`. `LENS.md` is the catalogue a reader drops into any project and any model; this file holds what only its maintainer needs — the witness's claims, the lifecycle and admission rules, the change log and the ancestry ledger. Section numbers continue from `LENS.md`.
+> Kept in `workspace/`, one level below `LENS.md`, and read with it by `check_lens.py`. `LENS.md` is the catalogue a reader drops into any project and any model; this file holds what only its maintainer needs — the witness's claims, the lifecycle and admission rules, the change log and the ancestry ledger. Section numbers continue from `LENS.md`.
 >
 > **The source.** The ancestors in the ledger are the review cycles, state machines and compositions of [AI_WAY_OF_BUILDING_V1](https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1) — the older catalogue this one was seeded from — at the commit `ancestry_manifest.json` names. The state machines this kit wrote itself — the Devī Māhātmya's eight and the LLM reviewer — live there too, in `fsms/atlas-fsms/`, so the manifest derives from that repository alone. The laws, engines and hooks stay in that repository.
 
@@ -72,6 +72,10 @@ The state line in this file's front matter is read by the witness (claim 16), no
 **Scope honesty.** This file does not say what to think. A section that drifts into telling the reader what the right answer is loses its place at the next check.
 
 ## §7. Change log
+
+### 2.1c — 2026-10-24 — the maintainer's files move into `workspace/`
+
+The repository's root now holds only `LENS.md` and a README about dropping it in; everything used to change it — this file, the witness and its self-test, the recall report, the state diff, the manifest and its derivation script, the platform adapters and the maintainer's README — moves into `workspace/`. The scripts look for their files beside `LENS.md` first and in the workspace second, so a flat copy still checks, and `python3 workspace/check_lens.py` from the root needs no argument. `LENS.md`'s closing section names `workspace/LENS_META.md` and `workspace/check_lens.py`; claim 20 still finds the pointer. No lens, tag, claim or ledger decision changed.
 
 ### 2.1b — 2026-10-24 — the source is one repository
 

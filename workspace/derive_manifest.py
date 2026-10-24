@@ -15,7 +15,7 @@ import json, re, sys
 from pathlib import Path
 
 root = Path(sys.argv[1]).resolve()
-out = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("ancestry_manifest.json")
+out = Path(sys.argv[2]) if len(sys.argv) > 2 else Path(__file__).resolve().parent / "ancestry_manifest.json"
 
 # ---------- cycles from the catalogue file (two heading styles + routing table) ----------
 atlas = (root / "ATLAS.md").read_text(encoding="utf-8")

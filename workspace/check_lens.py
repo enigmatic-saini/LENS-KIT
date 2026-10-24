@@ -1,13 +1,26 @@
 #!/usr/bin/env python3
 """check_lens.py — the witness for LENS.md.
 
-Verifies the fourteen claims in LENS.md §5. Exit 0 when all hold, 1 on the first
-failure, printing every failure found. No dependencies beyond the standard
-library. Run:  python3 check_lens.py [path/to/LENS.md]
+Verifies the claims in LENS_META.md §5 against LENS.md and LENS_META.md. Exit 0 when all
+hold, 1 otherwise, printing every failure found. No dependencies beyond the standard
+library. Run:  python3 workspace/check_lens.py [path/to/LENS.md]   (default: the LENS.md one level above the workspace)
 """
 import re
 import sys
 from pathlib import Path
+
+HERE = Path(__file__).resolve().parent   # the workspace: LENS_META.md, the manifest and the scripts live here
+
+
+def beside(lens_path, name):
+    """A maintainer's file: next to LENS.md if it is there (a flat copy, or the self-test's temp
+    folder), else in the workspace beside this script (LENS-KIT's layout: LENS.md at the root)."""
+    p = Path(lens_path).with_name(name)
+    return p if p.exists() else HERE / name
+
+
+def default_lens():
+    return HERE.parent / "LENS.md" if (HERE.parent / "LENS.md").exists() else Path("LENS.md")
 
 # Words that mark a single field of work. A lens section may not contain them.
 # Extend only through a §7 change-log entry.
@@ -40,14 +53,14 @@ def main(path):
     # 2.0: the catalogue is two files — LENS.md (drop-in, §0–§4) and LENS_META.md beside it
     # (§5–§7). Every claim reads them as one text; claim 20 reads LENS.md alone.
     core = Path(path).read_text(encoding="utf-8")
-    meta_path = Path(path).with_name("LENS_META.md")
+    meta_path = beside(path, "LENS_META.md")
     meta = meta_path.read_text(encoding="utf-8") if meta_path.exists() else ""
     text = core + "\n\n" + meta
     failures = []
     # Claim 20 — the drop-in half holds only its front matter and §0–§4, points to the meta file,
     # and names no model vendor, product or tool-specific feature
     if not meta:
-        failures.append("claim 20: LENS_META.md missing beside LENS.md")
+        failures.append("claim 20: LENS_META.md not found beside LENS.md or in the workspace")
     for h in re.findall(r"^## (§\d+)\.", core, re.M):
         if h not in ("§0", "§1", "§2", "§3", "§4"):
             failures.append(f"claim 20: LENS.md holds {h}; only §0–§4 belong in the drop-in half")
@@ -111,7 +124,7 @@ def main(path):
 
     # Claims 8–11 — ancestry: manifest → ledger (silence is caught), carried states, compositions, recall
     import json, subprocess
-    man_path = Path(path).with_name("ancestry_manifest.json")
+    man_path = beside(path, "ancestry_manifest.json")
     ledger = section(text, r"^### Ancestry ledger", r"^### 0\.")
     rows = re.findall(r"^\| ([^|]+?) \| ((?:kept|folded|not carried)[^|]*?) \| ([^|]*?) \| ([^|]*?) \|$", ledger, re.M)
     names = [r[0].strip() for r in rows]
@@ -151,7 +164,7 @@ def main(path):
             if key and not any(key in c for c in comp_names):
                 failures.append(f"claim 10: manifest composition '{comp['tag'] or comp['name']}' has no ledger row")
     else:
-        failures.append("claim 8: ancestry_manifest.json missing beside LENS.md — run derive_manifest.py")
+        failures.append("claim 8: ancestry_manifest.json not found beside LENS.md or in the workspace — run derive_manifest.py")
     for name, fate, carried, dropped in rows:
         for t in re.findall(r"`([A-Z0-9]+)`", fate):
             if t not in s3_set:
@@ -168,7 +181,7 @@ def main(path):
     for t in sorted(s3_set - fated):
         failures.append(f"claim 17: `{t}` is named by no ledger fate — a lens with no recorded ancestor")
     # claim 11 is advisory: run the recall report so it is seen at every release
-    rc = Path(path).with_name("check_recall.py")
+    rc = beside(path, "check_recall.py")
     if rc.exists() and man_path.exists():
         r = subprocess.run([sys.executable, "-I", str(rc), str(path), str(man_path)], capture_output=True, text=True)
         print("recall:", r.stdout.splitlines()[0] if r.stdout else "(no output)")
@@ -274,4 +287,4 @@ def main(path):
     return 0
 
 if __name__ == "__main__":
-    sys.exit(main(sys.argv[1] if len(sys.argv) > 1 else "LENS.md"))
+    sys.exit(main(sys.argv[1] if len(sys.argv) > 1 else default_lens()))

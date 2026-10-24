@@ -12,11 +12,24 @@ Run:  python3 check_recall.py [LENS.md] [manifest.json]
 import json, re, sys
 from pathlib import Path
 
+HERE = Path(__file__).resolve().parent   # the workspace: LENS_META.md, the manifest and the scripts live here
+
+
+def beside(lens_path, name):
+    """A maintainer's file: next to LENS.md if it is there (a flat copy, or the self-test's temp
+    folder), else in the workspace beside this script (LENS-KIT's layout: LENS.md at the root)."""
+    p = Path(lens_path).with_name(name)
+    return p if p.exists() else HERE / name
+
+
+def default_lens():
+    return HERE.parent / "LENS.md" if (HERE.parent / "LENS.md").exists() else Path("LENS.md")
+
 
 def classify(lens_path, man_path):
     """Return ({(ancestor, state): 'echoed'|'decided'|'undecided'}, per-ancestor tags)."""
     text = Path(lens_path).read_text(encoding="utf-8")
-    meta = Path(lens_path).with_name("LENS_META.md")
+    meta = beside(lens_path, "LENS_META.md")
     if "### Ancestry ledger" not in text and meta.exists():   # 2.0: the ledger lives beside
         text += "\n\n" + meta.read_text(encoding="utf-8")
     s3 = text[text.index("## §3."):text.index("## §4.")]
@@ -55,8 +68,8 @@ def words(s):
     return {w for w in re.findall(r"[a-z]{4,}", s.lower()) if w not in STOP}
 
 if __name__ == "__main__":
-    lens_path = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("LENS.md")
-    man_path = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("ancestry_manifest.json")
+    lens_path = Path(sys.argv[1]) if len(sys.argv) > 1 else default_lens()
+    man_path = Path(sys.argv[2]) if len(sys.argv) > 2 else beside(lens_path, "ancestry_manifest.json")
     out, tags_of, man = classify(lens_path, man_path)
     total = len(out); echoed = sum(v == "echoed" for v in out.values()); decided = sum(v == "decided" for v in out.values())
     print(f"states={total} echoed-in-own-lens={echoed} decided-dropped={decided} undecided={total-echoed-decided}   ('!' = trap/terminal state)")

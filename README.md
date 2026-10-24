@@ -1,41 +1,49 @@
-# LENS Kit
+# LENS
 
-A lens adds no knowledge. It fixes which question is asked first, from where, in what order — and when to stop looking. The same lens steers a person or a model through a trust hierarchy, a test suite, a book chapter or a hiring plan without changing a word.
+**One file — [`LENS.md`](LENS.md) — that you drop into any project or any model's instructions.**
 
-## Where it comes from
+A lens adds no knowledge. It fixes which question is asked first, from where, in what order, and when to stop looking. The same lens steers a person or an AI model through a trust hierarchy, a test suite, a book chapter or a hiring plan without changing a word. The model or person brings the knowledge; the lens decides where to look from.
 
-The lenses descend from the review cycles of [AI_WAY_OF_BUILDING_V1](https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1). That repository keeps the laws, engines, hooks and state machines; this one keeps only where to look from and when to stop. `LENS_META.md` records what became of every ancestor.
+## Drop it in
 
-## What is here
+`LENS.md` is self-contained, plain Markdown and names no vendor, so it works the same everywhere.
 
-| File | What it is |
+| Where | How |
 |---|---|
-| `LENS.md` | **The catalogue** — the only file a reader needs. Drop it into any project and any model's instructions. Holds the charter (§0), how to use it (§1), the routing table (§2), every lens (§3) and the named compositions (§4). |
-| `LENS_META.md` | The maintainer's half: the witness's claims (§5), lifecycle and admission rules (§6), the change log and the ancestry ledger (§7). Not needed to *run* a lens. |
-| `check_lens.py` | The witness. Checks both files against the claims in §5 and fails on drift. |
-| `check_lens_selftest.py` | Watches the witness: mutates a real line for each claim and confirms the witness fails on it. |
-| `check_recall.py` | Advisory report: every ancestor state is either echoed in its own lens or dropped with a reason. |
-| `statediff.py` | Shows which ancestor states changed fate between two versions of `LENS.md`. |
-| `ancestry_manifest.json` | Derived record of what the source kit, [AI_WAY_OF_BUILDING_V1](https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1), contained (cycles, state machines, compositions). Produced by `derive_manifest.py`, never edited by hand. |
-| `derive_manifest.py` | Rebuilds the manifest from the source, [AI_WAY_OF_BUILDING_V1](https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1), when the ancestry changes. |
-| `adapters/claude-skills/` | Optional: two Claude skills that run lenses on that platform (`lens`, `reflex-check`). `LENS.md` itself names no vendor. |
+| **A repository** | Copy `LENS.md` to the root, or to `docs/`. Point your contributors or your agent's instruction file at it. |
+| **An AI assistant's custom instructions** (Copilot, ChatGPT, Claude, Gemini…) | Upload or paste `LENS.md` as a knowledge file or instruction, and add one line of introduction (below). |
+| **A system prompt** | Paste the file, or the sections you need (§1 *How to use* plus the lenses you cite). |
+| **A team, no AI at all** | Print §2 *Routing table*; run a lens in a review meeting by reading its *Look for* items aloud, in order. |
 
-## Use
+**A one-line introduction to put above it:**
 
-Pick a situation in §2 of `LENS.md`, take its tag, and look through that lens in §3. If no row fits, start with `TRG`. Cite tags in anything that persists.
+> When I ask you to review, decide or plan, use LENS.md: pick the lens from §2 (start with `TRG` if unsure), walk its *Look for* items in order, mark each finding seen, told or guessed, stop when an exit fires, and give the result in the shape the lens produces.
 
-## Check
+Add your own context to that line if it helps, e.g. *"I am an enterprise security architect; most artefacts I bring are designs, policies and vendor proposals."*
 
-Python 3, standard library only. Keep the files side by side.
+## Use it
 
-```
-python3 check_lens.py LENS.md          # LENS.md: OK — 46 lenses, 46 routes, claims 1–14, 16–20 hold
-python3 check_lens_selftest.py LENS.md # selftest: OK
-python3 check_recall.py LENS.md ancestry_manifest.json
-```
+1. **Pick.** Find your situation in **§2** — five families: *Begin, See, Guard, Move, Hold*. Take its tag (`RR`, `SHD`, `ES`…). If nothing fits, start with **`TRG`** (Triage), which names the lens to use.
+2. **Look.** Read that lens in **§3**. Walk every *Look for* item in its written order; for each, say what you see or "nothing seen".
+3. **Tag what each finding rests on.** *seen* (in the thing itself), *told* (someone said so), *guessed*. A verdict rests on *seen* only.
+4. **Stop on the exit.** Every lens names its exits — ask one thing more, re-aim, say nothing should be done, or no lens fits. When one fires, stop.
+5. **Deliver what it produces** — each lens names the shape of its result, and nothing after it.
 
-## Change
+**Depth:** *glance* (first question and exits — does the lens apply?), *look* (default — every item), *deep* (every item, then re-aim once and look again).
+**Combine:** write tags in order — `×` means look through both before concluding, `→` means the left result feeds the right. Named reading orders are in **§4**, e.g. `AHR × OE × VD × SHD → SMR` to compare two options and decide.
+**Cite tags** in anything that persists; in conversation the lineage name is fine ("run the Radha lens").
 
-A change to a lens follows `LENS_META.md` §6 and is logged in §7; run all three checks before it is released.
+A worked example — one lens, one artefact, stopping at its exit — is in §1 of `LENS.md`.
 
-*Version 2.1.*
+## Ask for it in words
+
+- "Run `TRG` on this proposal, then the lens it names."
+- "Look at this design through `SHD` and `NEG`, at *look* depth."
+- "`ES` on our incident runbook — can it be stopped, and has that been tried?"
+- "Run the Saraswati lens on this README."
+
+## Changing the catalogue
+
+Everything used to maintain `LENS.md` lives in [`workspace/`](workspace/): the maintainer's notes and change log (`LENS_META.md`), the checks that fail on drift, and the ancestry record. See [`workspace/README.md`](workspace/README.md). You never need that folder to *use* a lens.
+
+The lenses descend from the review cycles of [AI_WAY_OF_BUILDING_V1](https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1).

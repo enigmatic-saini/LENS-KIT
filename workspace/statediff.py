@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """statediff.py — which ancestor states changed fate between two versions of LENS.md.
-Run:  python3 statediff.py OLD_LENS.md NEW_LENS.md ancestry_manifest.json
-Each LENS.md needs its LENS_META.md beside it. Prints every state whose fate moved, then the count.
+Run:  python3 workspace/statediff.py OLD_LENS.md NEW_LENS.md workspace/ancestry_manifest.json
+Each LENS.md reads the LENS_META.md beside it, or else the one in the workspace. Prints every state whose fate moved, then the count.
 """
 import sys
 from pathlib import Path

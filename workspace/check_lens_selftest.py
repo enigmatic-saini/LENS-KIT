@@ -3,16 +3,18 @@
 
 Mutates a *real* row or line of LENS.md in a temp folder (with the manifest and recall script
 beside it) and asserts that check_lens.py fails on the intended claim. Exit 0 when every case
-fires on its claim; 1 otherwise. Run beside LENS.md:  python3 check_lens_selftest.py [LENS.md]
+fires on its claim; 1 otherwise. Run:  python3 workspace/check_lens_selftest.py [LENS.md]
 """
 import re, shutil, subprocess, sys, tempfile
 from pathlib import Path
 
-here = Path(sys.argv[1]).resolve().parent if len(sys.argv) > 1 else Path(".").resolve()
-core_src = (here / (Path(sys.argv[1]).name if len(sys.argv) > 1 else "LENS.md")).read_text(encoding="utf-8")
+here = Path(__file__).resolve().parent   # the workspace: the scripts, the manifest and LENS_META.md
+lens = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else (here.parent / "LENS.md" if (here.parent / "LENS.md").exists() else here / "LENS.md")
+core_src = lens.read_text(encoding="utf-8")
 # 2.0: the catalogue is two files; cases mutate the joined text, which is split back at the marker
 SPLIT = "\n\n<<<LENS_META>>>\n\n"
-meta_src = (here / "LENS_META.md").read_text(encoding="utf-8") if (here / "LENS_META.md").exists() else ""
+meta_p = lens.with_name("LENS_META.md") if lens.with_name("LENS_META.md").exists() else here / "LENS_META.md"
+meta_src = meta_p.read_text(encoding="utf-8") if meta_p.exists() else ""
 src = core_src + SPLIT + meta_src
 
 def first_line(pattern):
