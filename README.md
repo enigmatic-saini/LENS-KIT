@@ -2,6 +2,10 @@
 
 A lens adds no knowledge. It fixes which question is asked first, from where, in what order — and when to stop looking. The same lens steers a person or a model through a trust hierarchy, a test suite, a book chapter or a hiring plan without changing a word.
 
+## Where it comes from
+
+The lenses descend from the review cycles of [AI_WAY_OF_BUILDING_V1](https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1). That repository keeps the laws, engines, hooks and state machines; this one keeps only where to look from and when to stop. `LENS_META.md` records what became of every ancestor.
+
 ## What is here
 
 | File | What it is |
@@ -12,8 +16,8 @@ A lens adds no knowledge. It fixes which question is asked first, from where, in
 | `check_lens_selftest.py` | Watches the witness: mutates a real line for each claim and confirms the witness fails on it. |
 | `check_recall.py` | Advisory report: every ancestor state is either echoed in its own lens or dropped with a reason. |
 | `statediff.py` | Shows which ancestor states changed fate between two versions of `LENS.md`. |
-| `ancestry_manifest.json` | Derived record of what the source kit contained (cycles, state machines, compositions). Produced by `derive_manifest.py`, never edited by hand. |
-| `derive_manifest.py` | Rebuilds the manifest from the source kit when the ancestry changes. |
+| `ancestry_manifest.json` | Derived record of what the source kit, [AI_WAY_OF_BUILDING_V1](https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1), contained (cycles, state machines, compositions). Produced by `derive_manifest.py`, never edited by hand. |
+| `derive_manifest.py` | Rebuilds the manifest from the source, [AI_WAY_OF_BUILDING_V1](https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1), when the ancestry changes. |
 | `adapters/claude-skills/` | Optional: two Claude skills that run lenses on that platform (`lens`, `reflex-check`). `LENS.md` itself names no vendor. |
 
 ## Use

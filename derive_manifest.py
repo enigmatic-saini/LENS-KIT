@@ -7,6 +7,8 @@ Walks the ancestor repository and records everything a catalogue could drop:
   - every named composition
   - every working-set tag
 Run:  python3 derive_manifest.py <source-repo-root> [out.json]
+The source is https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1; the state machines this kit
+wrote itself are copied into its fsms/atlas-fsms/ first, and the manifest lists them as added beside it.
 The output is data about the source; the lens catalogue never reads it as instructions.
 """
 import json, re, sys
@@ -68,8 +70,22 @@ for f in sorted((root / "fsms" / "atlas-fsms").glob("*Fsm.toml")):
     transitions = re.findall(r'event\s*=\s*"([^"]+)"', t)
     fsms[f.stem.replace("Fsm", "")] = {"file": str(f.relative_to(root)), "states": states, "transitions": transitions}
 
+def source_of(root):
+    """Name the source by its repository and commit, not by a local path, and list any state
+    machines present in the folder but not in that commit (ancestors added beside the source)."""
+    import subprocess
+    def git(*a):
+        r = subprocess.run(["git", "-C", str(root), *a], capture_output=True, text=True)
+        return r.stdout.strip() if r.returncode == 0 else ""
+    url = git("remote", "get-url", "origin")
+    if not url:
+        return {"repo": root.name}
+    url = re.sub(r"\.git$", "", re.sub(r"https://[^@/]+@", "https://", url))
+    added = sorted(git("ls-files", "--others", "--", "fsms/atlas-fsms").split())
+    return {"repo": url, "commit": git("rev-parse", "HEAD"), "added_beside_source": added}
+
 manifest = {
-    "source": str(root),
+    "source": source_of(root),
     "cycles": cycles,
     "working_set": [{"tag": t, "name": n} for t, n in working_set],
     "compositions": compositions,

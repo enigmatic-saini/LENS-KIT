@@ -4,11 +4,14 @@ state: GROWING
 as_of: 2026-10-23
 checked_by: check_lens.py
 successor: none
+source: https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1
 ---
 
 # LENS_META — the maintainer's half of LENS.md
 
 > Kept beside `LENS.md` and read with it by `check_lens.py`. `LENS.md` is the catalogue a reader drops into any project and any model; this file holds what only its maintainer needs — the witness's claims, the lifecycle and admission rules, the change log and the ancestry ledger. Section numbers continue from `LENS.md`.
+>
+> **The source.** The ancestors in the ledger are the review cycles, state machines and compositions of [AI_WAY_OF_BUILDING_V1](https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1) — the older catalogue this one was seeded from — at the commit `ancestry_manifest.json` names, together with the state machines this kit wrote itself (the Devī Māhātmya's eight and the LLM reviewer), which the manifest lists as added beside it. The laws, engines and hooks stay in that repository.
 
 ## §5. Witness
 
@@ -64,11 +67,15 @@ The state line in this file's front matter is read by the witness (claim 16), no
 
 **Successor.** If this catalogue is superseded, the successor is named in the front matter, every tag is carried or explicitly retired there, and this file stops changing.
 
-**Existence is derived; only the decision is typed.** What the source contains is read by a script into the manifest. A person decides each entry's fate and writes that decision into the ledger. Nothing may be marked kept, folded or not carried unless the manifest names it, and nothing in the manifest may be left without a fate.
+**Existence is derived; only the decision is typed.** What the source — [AI_WAY_OF_BUILDING_V1](https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1) — contains is read by a script into the manifest. A person decides each entry's fate and writes that decision into the ledger. Nothing may be marked kept, folded or not carried unless the manifest names it, and nothing in the manifest may be left without a fate.
 
 **Scope honesty.** This file does not say what to think. A section that drifts into telling the reader what the right answer is loses its place at the next check.
 
 ## §7. Change log
+
+### 2.1a — 2026-10-24 — the source named
+
+Where this file said *the source* or *an older catalogue*, it now names it: [AI_WAY_OF_BUILDING_V1](https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1), in the front matter, the opening note, §6's derivation rule, the ledger and the 0.1 entry. `derive_manifest.py` records the source as that repository and its commit instead of a local path, and lists the state machines this kit wrote itself as added beside it; the manifest was re-derived, and only its `source` changed. `LENS.md` is unchanged — the drop-in half needs no source to be read. No lens, tag, claim or ledger decision changed.
 
 ### 2.1 — 2026-10-23 — the drop-in file opens with its title and version only
 
@@ -356,7 +363,7 @@ A council of fourteen re-read every ancestor's state machine, then Krishna decid
 
 ### Ancestry ledger
 
-Every ancestor the manifest lists, and what became of it. *Carried* names the ancestor's states that have an echo in a lens; *dropped* names those that do not, with the reason. The witness checks manifest → ledger, so nothing can be left out.
+Every ancestor the manifest lists — from [AI_WAY_OF_BUILDING_V1](https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1), or added beside it — and what became of it. *Carried* names the ancestor's states that have an echo in a lens; *dropped* names those that do not, with the reason. The witness checks manifest → ledger, so nothing can be left out.
 
 | Ancestor | Fate | Carried states | Dropped states |
 |---|---|---|---|
@@ -446,7 +453,7 @@ Every ancestor the manifest lists, and what became of it. *Carried* names the an
 
 #### Compositions
 
-| Composition in the source | Fate |
+| Composition in AI_WAY_OF_BUILDING_V1 | Fate |
 |---|---|
 | HSC Heart-and-Soul (MID × ASD) | folded → §4 Ratification carries the heart (`MID`); `RR` carries the witness |
 | T4R Ratification (KBD × NGD × VKD × MID) | kept → §4 Ratification `AHR × OE × VKD × MID` |
@@ -481,7 +488,7 @@ Rewrote `TRG` after holding it against its ancestor: added the feeling-to-seat t
 
 ### 0.1 — 2026-10-20 — Born
 
-Seeded from an older catalogue of review cycles, taking the seats and leaving the engine.
+Seeded from an older catalogue of review cycles, [AI_WAY_OF_BUILDING_V1](https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1), taking the seats and leaving the engine.
 
 **Kept, with one tag each (older second tags shown once, never used again):** `TRG` (was also the Navigator's tag) · `IN` · `MID` · `RKM` · `HO` (was also Sanjay's own tag) · `RR` (absorbs Shiva's and Ashtavakra's honesty audits) · `AHR` (Kabir) · `OE` (Nagarjuna; absorbs Haridas and Akka Mahadevi) · `LR` (MahaKaal) · `SRD` · `FND` · `SHD` (absorbs Kaalratri's dark corners) · `NEG` · `SID` · `VD` · `SR` (Lakshman) · `ES` (Baglamukhi) · `ND` · `SMR` (Krishna) · `AJN` (absorbs Ganesh's obstacle removal) · `DEF` · `CKD` · `TVD` · `AR` (Brahma) · `VKD` · `SSD` (absorbs the archer-queen's one perfect shot) · `PJD` (absorbs Brahmacharini) · `RDY` (absorbs the pre-release law check and Siddhidatri's polish) · `CLN` · `AND` · `HD` · `RVD` (absorbs Skandamata's nurture of the new) · `STN` (new tag; folds Satyabhama, Kalindi, Jambavati, Prahlad, Mitravinda, Nagnajiti, Surdas, Bhadra as named prompts).
 
