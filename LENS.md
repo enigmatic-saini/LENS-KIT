@@ -1,6 +1,6 @@
 # LENS — where to look from, and when to stop
 
-*Version 2.2*
+*Version 2.2a*
 
 ## §0. Charter
 
@@ -14,7 +14,7 @@ A lens adds no knowledge. It is a named place to look from, with a way through i
 4. **Choose a depth** — *glance*: the first question and the exits only, to see whether the lens applies · *look* (default): every *Look for* item in order · *deep*: every item, then re-aim once from what was found and look again. Say the depth at the top. A glance produces no verdict; an exit firing at a glance means only that the lens must be run at *look*.
 5. **Mark what each finding rests on** — *seen* in the thing itself, *told* by someone, or *guessed*; what the looking brought rather than the thing is *guessed*. A verdict rests on what was seen only; what was told or guessed is reported, never counted.
 6. **Stop on the exit** — a lens ends when its exit fires, not when the reader tires. If no exit fired, the looking is not finished.
-7. **Keep a record when it matters** — in the shape of the worked example below: the depth; each lens's tag and name; every *Look for* item in order with what was seen or *nothing seen*, and what it rests on; the exit that fired; what the lens produces; and, for a composition, the one thing it ends in. If the work keeps records, name it `LOOK_<date>_<tag>_<topic>.md` and keep it where the work keeps its findings.
+7. **Keep a record when it matters** — a record holds four things: the depth; each *Look for* item in order with what was seen or *nothing seen*, and what it rests on; the exit that fired; what the lens produces — and, for a composition, the one thing it ends in. The worked example below shows one way to write it; the layout is yours, the four things are not. If the work keeps records, name it `LOOK_<date>_<tag>_<topic>.md` and keep it where the work keeps its findings.
 8. **Name it either way** — in anything that persists, cite the tag; in conversation the lineage name is fine ("run the Radha lens"). Where one figure opens two lenses, name the scene: Mira in the palace is `MID`, Mira in the court is `MIR`; Shiva's third eye is `RR`, the same eye turned on the boundary is `NEG`.
 9. **Never redefine a lens outside this file.**
 
@@ -38,7 +38,7 @@ Produces: Flow verdict — withdrawing, from the week its author left. Mark the 
   First thing to protect: the three items the newest members use. (Rests on [seen] only; the [told] findings are reported, not counted.)
 ```
 
-The look did not fix the checklist — `LKM` handed the correction to `VD` — and it stopped at the exit, though there was more to say.
+Three things to notice, whatever shape a record takes: the look did not fix the checklist — `LKM` handed the correction to `VD`; it stopped at the exit, though there was more to say; and its last line refuses the [told] findings a verdict.
 
 ## §2. Routing table
 
