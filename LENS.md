@@ -1,35 +1,26 @@
 # LENS — where to look from, and when to stop
 
-*Version 2.1*
-
-> A lens adds no knowledge. It fixes which question is asked first, from where, in what order — and when to stop looking.
+*Version 2.2*
 
 ## §0. Charter
 
-**Why lenses.** You cannot see what you have not been told to look for. Left alone, attention goes to the most probable next thought, which is usually the comfortable one. A lens moves you: looking through it, some things cannot be missed and others cannot be seen, and that is the point. And some things will be seen that are not there: the lens's own shape, laid over the thing. So every finding says whether it was seen in the thing or brought by the looking — the law in §1 exists for this.
-
-**What a lens is.** A named place to look from, with a way through it: when to pick it up, the first question, the questions that follow in order, the exits — ask one thing more, re-aim, say that nothing should be done, or put it down and say that no lens fits — and the shape of what you carry away. The same lens serves a trust hierarchy, a verification suite, a chapter draft or a hiring plan without changing a word, because it holds nothing that belongs to any of them. It orders the looking, never the doing.
-
-**What this file is.** One catalogue. Every lens is here and nowhere else. The figure or tradition a lens descends from is kept as ancestry, so nothing is forgotten, and never as a second name.
-
-**What done looks like.** Any work in any field can cite a tag here and get the same lens. No tag, count or definition lives anywhere else. The file can be checked for drift mechanically, by the witness kept with its maintainer's notes in `LENS_META.md`.
-
-**What this file refuses to hold.** Answers. If an entry tells you what to think rather than where to look from and when to stop, it is advice wearing a lens's name, and it goes.
+A lens adds no knowledge. It is a named place to look from, with a way through it: when to pick it up, the first question, the questions that follow in order, the exits — ask one thing more, re-aim, say that nothing should be done, or put it down and say that no lens fits — and the shape of what you carry away. It orders the looking, never the doing. Looking through one, some things cannot be missed and others cannot be seen; and some will be seen that are not there, the lens's own shape laid over the thing — the law in §1 exists for this.
 
 ## §1. How to use
 
-- **Pick** — find the situation in §2, take its tag, read that lens in §3. If no row fits, start with `TRG`.
-- **Combine** — write an ordered list of tags. `×` means look through both before concluding; `→` means the result of the left feeds the right. Example: `AHR × OE × VD × SHD → SMR` (compare two artefacts, then decide).
-- **Escalate, then consolidate** — start with one lens; if it cannot settle the matter, a pair; then four; only then the whole table. Afterwards, one consolidated verdict, not a pile of findings.
-- **Choose a depth** — *glance*: the first question and the exits only, for a quick sense of whether the lens applies · *look* (default): every Look-for item in order · *deep*: every item, then re-aim once from what was found and look again. Say the depth at the top of a look; a glance may not produce a verdict — and if an exit fires at a glance, that means only that the lens applies and must be run at *look*; the exit's hand-off is not taken, and nothing is decided.
-- **Keep a record when it matters** — a look worth keeping is saved in the record's shape, as `LOOK_<date>_<tag>_<topic>.md`, where the work keeps its records — beside the thing, or with the work's other findings. Not every look is kept; every kept look names its depth, its exits and what each finding rested on — *seen* in the thing itself, *told* by someone, or *guessed* — and a verdict rests on what was seen only; what was told or guessed is reported, never counted. The record's shape: the depth, said first; for each lens run, its tag and name, then every *Look for* item in its written order with what was seen there — or *nothing seen* — and what it rests on; the exit that fired, named; what the lens produces, resting on what was seen only; and, when more than one lens ran, the one thing the composition ends in. The worked example below is one such record. A seeing on record — a reading made earlier and not repeated — names that record and counts only as far as it held; what the looking brought rather than the thing is *guessed*.
-- **Stop on the exit** — a lens ends when its exit fires, not when the reader tires. If no exit fired, the looking is not finished.
-- **Name it either way** — in anything that persists (a record, a column, a log), cite the tag. In conversation, the lineage name is fine — "run the Radha lens", "the appropriate lens or combination" — because a lineage name opens the lens whose line it begins. Where one figure opens more than one, name the scene: Mira in the palace is `MID`, Mira in the court is `MIR`; Shiva's third eye is `RR`, the same eye turned on the boundary is `NEG`. Never redefine a lens outside this file; if a lens needs changing, change it here and log it in the change log of `LENS_META.md`, by its rules.
-- **Resolve a stack** — when several lenses are declared at once (`active → authority → intent ; consult: …`), the active lens looks hardest; the authority sets the rules; the intent is what the result must serve; consults are heard, not obeyed.
+1. **Pick** — find the situation in §2, take its tag, read that lens in §3. If no row fits, start with `TRG`.
+2. **Combine** — an ordered list of tags: `×` means look through both before concluding; `→` means the result of the left feeds the right. Named orders are in §4.
+3. **Escalate, then consolidate** — one lens; if it cannot settle the matter, a pair; then four; only then the whole table. Afterwards one verdict, not a pile of findings.
+4. **Choose a depth** — *glance*: the first question and the exits only, to see whether the lens applies · *look* (default): every *Look for* item in order · *deep*: every item, then re-aim once from what was found and look again. Say the depth at the top. A glance produces no verdict; an exit firing at a glance means only that the lens must be run at *look*.
+5. **Mark what each finding rests on** — *seen* in the thing itself, *told* by someone, or *guessed*; what the looking brought rather than the thing is *guessed*. A verdict rests on what was seen only; what was told or guessed is reported, never counted.
+6. **Stop on the exit** — a lens ends when its exit fires, not when the reader tires. If no exit fired, the looking is not finished.
+7. **Keep a record when it matters** — in the shape of the worked example below: the depth; each lens's tag and name; every *Look for* item in order with what was seen or *nothing seen*, and what it rests on; the exit that fired; what the lens produces; and, for a composition, the one thing it ends in. If the work keeps records, name it `LOOK_<date>_<tag>_<topic>.md` and keep it where the work keeps its findings.
+8. **Name it either way** — in anything that persists, cite the tag; in conversation the lineage name is fine ("run the Radha lens"). Where one figure opens two lenses, name the scene: Mira in the palace is `MID`, Mira in the court is `MIR`; Shiva's third eye is `RR`, the same eye turned on the boundary is `NEG`.
+9. **Never redefine a lens outside this file.**
 
 ### A worked example
 
-The artefact: a one-page checklist a team reads together every morning. Someone asks whether it is still worth the ten minutes. §2 says *Value may not be reaching anyone, and trust is moving* → `LKM`. Depth *look*, in the record's shape:
+The artefact: a one-page checklist a team reads together every morning. Someone asks whether it is still worth the ten minutes. §2 says *Value may not be reaching anyone, and trust is moving* → `LKM`. Depth *look*:
 
 ```
 Depth: look
@@ -47,7 +38,7 @@ Produces: Flow verdict — withdrawing, from the week its author left. Mark the 
   First thing to protect: the three items the newest members use. (Rests on [seen] only; the [told] findings are reported, not counted.)
 ```
 
-Two things to notice: the look did not fix the checklist — `LKM` orders the looking, and handed the correction to `VD` — and it stopped at the exit, though there was more to say.
+The look did not fix the checklist — `LKM` handed the correction to `VD` — and it stopped at the exit, though there was more to say.
 
 ## §2. Routing table
 
@@ -520,10 +511,7 @@ Five families, by what the moment needs. If no row fits, start with `TRG`.
 | Unblock | `GD` or `AJN → SMR` | when nothing moves: `GD` if the work is blocked, `AJN` if the person is | the first move, then a decision record |
 | Council | `RR AHR OE SRD CKD PJD SSD VKD ARD TVD` + `STN`, then one consolidated verdict | before a hard call; many lenses at once, one answer | one consolidated verdict |
 | Adversaries | `RKB × MHS × NSB × SHD → DRG` | when an adversary does not fall to the ordinary strike — it multiplies, changes kind, or sends a second out of itself — read its pattern before the gathered answer | the gathered form and its terms, each adversary's pattern routed to its lens |
-| Record | any look, at any depth | when the look must outlive the conversation | `LOOK_<date>_<tag>_<topic>.md` in §1's record shape |
-
-A composition is a reading order, not a new lens, and it ends in one thing — the *Ends in* column — never in a pile of findings. It earns a row here only after it has been used more than once with the same shape.
 
 ## Kept with this file
 
-*This file is the whole catalogue a reader needs, for any reviewer, human or model. It is maintained with `workspace/LENS_META.md` — the witness's claims (§5), the lifecycle and its admission rules (§6), the change log and the ancestry ledger (§7) — and checked by `workspace/check_lens.py`. A change to a lens follows `LENS_META.md` §6.*
+*Maintained at github.com/enigmatic-saini/LENS-KIT; the witness, the lifecycle and admission rules, and the change log are in `workspace/LENS_META.md`.*

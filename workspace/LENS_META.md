@@ -1,7 +1,7 @@
 ---
 of: LENS.md
 state: GROWING
-as_of: 2026-10-23
+as_of: 2026-11-01
 checked_by: check_lens.py
 successor: none
 source: https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1
@@ -45,7 +45,7 @@ source: https://github.com/enigmatic-saini/AI_WAY_OF_BUILDING_V1
 20. `LENS.md` is the drop-in half: it holds only its title, its version and §0–§4, points to this file, and names no model vendor, product or tool-specific feature, so it serves any reviewer — human or model — without changing a word.
 
 
-Last verified: 2026-10-23 (version 2.1).
+Last verified: 2026-11-01 (version 2.2).
 
 ## §6. Lifecycle
 
@@ -72,6 +72,10 @@ The state line in this file's front matter is read by the witness (claim 16), no
 **Scope honesty.** This file does not say what to think. A section that drifts into telling the reader what the right answer is loses its place at the next check.
 
 ## §7. Change log
+
+### 2.2 — 2026-11-01 — the drop-in file carries only what a look needs
+
+The sponsor's word: `LENS.md` is pasted into attachments, profile instructions and open chats, so every word before the lenses is a cost paid each session; it should be as light as it can be, and no lens's own section trimmed, because the sections are the essence. Decided through `MID × OE × SRD → SMR`, then `ITR` on that verdict, `ES` on the release, and `LR × ANR` on the analysis itself (this conversation; a record is not kept, since the file is the record). What moved: §0 keeps one paragraph — what a lens is and the third thing it does to the eye — and loses its four paragraphs for the maintainer (why lenses, what this file is, what done looks like, what it refuses), which are below under *§8*. §1 becomes nine numbered rules; the record's prose shape (1.8, 2.0) collapses into one rule that points at the worked example, which shows it; the stack rule (`active → authority → intent`) leaves — one adapter uses that syntax and already carries it; the name rule keeps its scene-naming sentence, which claim 19 reads. §4 loses its *Record* row, which was §1's rule restated, and its admission footnote, which is §6's. The closing section is one line naming the repository and this file. Not changed: §2, every section in §3 — no lineage, question, item, exit or product — and §4's rows. The witness and self-test hold; recall 441 / 118 / 0. Net: the file is lighter by about a tenth of its non-lens text's weight in words, and nine parts in ten of it are now lenses. A composition shown running — `SRD` found none — was proposed and left out: the wish was to lighten, not to add. Released as one commit so that a revert restores everything at once.
 
 ### 2.1c — 2026-10-24 — the maintainer's files move into `workspace/`
 
@@ -503,3 +507,23 @@ Seeded from an older catalogue of review cycles, [AI_WAY_OF_BUILDING_V1](https:/
 **Retired, with reason (four reversed in 0.3 — see above):** Aryabhata (read as numerical craft; reversed) · Gorakhnath (body mastery — one field; one prompt folded in 0.3) · Tansen (optimise-then-verify — a procedure; one prompt folded in 0.3) · Radha (read as a quality to serve, not a seat; reversed) · ArdhNarishwar (read as a measurement; reversed) · Tyagaraja (structure as beauty; one prompt folded in 0.3) · Lal Ded (read as a stance; reversed) · Osho, Buddha (one prompt each folded in 0.3) · Tulsidas, Chaitanya (devotion, open creation — already asked by `LR`, `SRD`, `RVD`, `ND`) · Kushmanda (one prompt folded in 0.3) · the grand audits of all nine forms and all eight queens (their escalation ladder is now §1; the rest are compositions for §4 when used).
 
 **Not carried, by design:** the laws, the twelve-step engine and its four profiles, hooks, state machines, roles and skills. They govern *how long and how strictly* one looks; this file only says *from where*.
+
+## §8. Kept for maintainers — text that left `LENS.md` at 2.2
+
+These paragraphs were `LENS.md`'s §0 and parts of §1 and §4 until 2.2. They are the maintainer's charter and are kept here unchanged so nothing is lost; a reader of the drop-in half does not need them.
+
+**Why lenses.** You cannot see what you have not been told to look for. Left alone, attention goes to the most probable next thought, which is usually the comfortable one. A lens moves you: looking through it, some things cannot be missed and others cannot be seen, and that is the point. And some things will be seen that are not there: the lens's own shape, laid over the thing. So every finding says whether it was seen in the thing or brought by the looking — the law in §1 exists for this.
+
+**What a lens is.** A named place to look from, with a way through it: when to pick it up, the first question, the questions that follow in order, the exits — ask one thing more, re-aim, say that nothing should be done, or put it down and say that no lens fits — and the shape of what you carry away. The same lens serves a trust hierarchy, a verification suite, a chapter draft or a hiring plan without changing a word, because it holds nothing that belongs to any of them. It orders the looking, never the doing.
+
+**What this file is.** One catalogue. Every lens is here and nowhere else. The figure or tradition a lens descends from is kept as ancestry, so nothing is forgotten, and never as a second name.
+
+**What done looks like.** Any work in any field can cite a tag here and get the same lens. No tag, count or definition lives anywhere else. The file can be checked for drift mechanically, by the witness kept with its maintainer's notes in `LENS_META.md`.
+
+**What this file refuses to hold.** Answers. If an entry tells you what to think rather than where to look from and when to stop, it is advice wearing a lens's name, and it goes.
+
+**Resolve a stack** (§1, until 2.2) — when several lenses are declared at once (`active → authority → intent ; consult: …`), the active lens looks hardest; the authority sets the rules; the intent is what the result must serve; consults are heard, not obeyed. The `lens` skill adapter carries this.
+
+**A seeing on record** (§1, until 2.2) — a reading made earlier and not repeated — names that record and counts only as far as it held.
+
+**Compositions** (§4's footnote, until 2.2) — a composition is a reading order, not a new lens, and it ends in one thing — the *Ends in* column — never in a pile of findings. It earns a row here only after it has been used more than once with the same shape.
